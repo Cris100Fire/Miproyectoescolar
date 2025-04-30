@@ -1,0 +1,280 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente y fondo principal */
+body {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #000000;
+  color: #000000;
+}
+.subtitle {
+  color: #ecf0f1;
+}
+
+/* HERO - Imagen de fondo */
+.hero {
+  height: 90vh;
+  background-image: url("logaritmos_1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Secciones generales */
+section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 70px;
+  margin: 40px 30px;
+  box-shadow: 0 6px 15px rgb(255, 255, 255);
+}
+
+/* Títulos */
+h2 {
+  color: #3498db;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+h3 {
+  color: #2980b9;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+/* Párrafos */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+/* Código */
+code {
+  background: #34495e;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  color: #ecf0f1;
+}
+
+.pasos {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #2c3e50;
+  white-space: pre-line;
+  margin-top: 15px;
+}
+
+/* Formularios */
+form {
+  margin-top: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #7f8c8d;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #3498db;
+  color: #ffffff;
+}
+.formulario {
+  margin: 50px 100px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #02273f;
+}
+
+/* Sección de resultados */
+section > section {
+  background: #ffffff;
+  border-left: 5px solid #3498db;
+  border-bottom: 5px solid #3498db;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* ======== NAVBAR ========= */
+.navbar {
+  background: #000000;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  display: flex;
+}
+
+.nav-link {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #3498db;
+}
+
+/* ======== MENU HAMBURGUESA ========= */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #ecf0f1;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.menu-toggle.is-active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: #2c3e50;
+    display: none;
+    text-align: center;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .formulario {
+    margin: 20px 10px;
+  }
+}
+
+/* ======== SCROLL SUAVE ======== */
+html {
+  scroll-behavior: smooth;
+}

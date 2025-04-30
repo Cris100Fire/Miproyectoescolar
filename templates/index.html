@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Logaritmos - Concepto, Propiedades y Calculadora</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+    <html lang="es">
+      <head>
+        <meta charset="UTF-8" />
+        <title>Logaritmos - Concepto, Propiedades y Calculadora</title>
+        <link
+          rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}"
+        />
+      </head>
+
+      <body>
+        <nav class="navbar">
+          <div class="nav-container">
+            <a href="#inicio" class="nav-logo">Logaritmos</a>
+            <div class="menu-toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="#inicio" class="nav-link">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="#propiedades" class="nav-link">Propiedades</a>
+              </li>
+              <li class="nav-item">
+                <a href="#calculadora" class="nav-link">Calculadora</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <header class="hero" id="inicio">
+          <div class="hero-text">
+            <h1>Descubre el Mundo de los Logaritmos</h1>
+            <p class="subtitle">
+              Explora conceptos, propiedades y cálculos de manera fácil y
+              rápida.
+            </p>
+          </div>
+        </header>
+
+        <!-- secciones... -->
+
+        <section>
+          <h2>¿Qué es un logaritmo?</h2>
+          <p>
+            El logaritmo es la operación inversa a la potenciación. <br />
+            <strong>Ejemplo:</strong> Si <code>2^3 = 8</code>, entonces
+            <code>log<sub>2</sub>(8) = 3</code>.
+          </p>
+        </section>
+
+        <section id="propiedades">
+          <h2>Propiedades de los Logaritmos</h2>
+
+          <h3>1. log<sub>a</sub>(N) = b, entonces N = a<sup>b</sup></h3>
+          <p>
+            Si el logaritmo de un número es igual a un valor, entonces el número
+            es la base elevada a ese valor.<br />
+            <strong>Ejemplo:</strong> log<sub>2</sub>(8) = 3 → 2<sup>3</sup> = 8
+          </p>
+
+          <h3>2. log<sub>a</sub>(a) = 1</h3>
+          <p>
+            El logaritmo de un número en su misma base siempre es 1.<br />
+            <strong>Ejemplo:</strong> log<sub>5</sub>(5) = 1
+          </p>
+
+          <h3>3. log<sub>a</sub>(b<sup>c</sup>) = c · log<sub>a</sub>(b)</h3>
+          <p>
+            El exponente puede salir del logaritmo como un factor
+            multiplicativo.<br />
+            <strong>Ejemplo:</strong> log<sub>2</sub>(8<sup>2</sup>) = 2 ×
+            log<sub>2</sub>(8) = 2 × 3 = 6
+          </p>
+
+          <h3>4. log<sub>a</sub>(a<sup>c</sup>) = c</h3>
+          <p>
+            Si tienes la base elevada a un exponente dentro del logaritmo,
+            simplemente el resultado es el exponente.<br />
+            <strong>Ejemplo:</strong> log<sub>3</sub>(3<sup>4</sup>) = 4
+          </p>
+
+          <h3>
+            5. log<sub>b</sub>(c / d) = log<sub>b</sub>(c) - log<sub>b</sub>(d)
+          </h3>
+          <p>
+            El logaritmo de un cociente es igual a la resta de los logaritmos
+            del numerador y del denominador.<br />
+            <strong>Ejemplo:</strong> log<sub>5</sub>(25 / 5) =
+            log<sub>5</sub>(25) - log<sub>5</sub>(5) = 2 - 1 = 1
+          </p>
+
+          <h3>
+            6. log<sub>b</sub>(c × d) = log<sub>b</sub>(c) + log<sub>b</sub>(d)
+          </h3>
+          <p>
+            El logaritmo de un producto es igual a la suma de los logaritmos de
+            cada factor.<br />
+            <strong>Ejemplo:</strong> log<sub>2</sub>(4 × 8) =
+            log<sub>2</sub>(4) + log<sub>2</sub>(8) = 2 + 3 = 5
+          </p>
+
+          <h3>7. log<sub>c⁽ᵇ⁾</sub>(a) = (1/b) log<sub>c</sub>(a).</h3>
+          <p>
+            Cambiando de base, puedes reescribir un logaritmo utilizando una
+            fracción.<br />
+            <strong>Ejemplo:</strong> log<sub>2⁽³⁾</sub>(8) = (1/3) ×
+            log<sub>2</sub>(8) = (1/3) × 3 = 1
+          </p>
+
+          <h3>
+            8. log<sub>a</sub>(s) × log<sub>s</sub>(r) × log<sub>r</sub>(c) =
+            log<sub>a</sub>(c)
+          </h3>
+          <p>
+            La multiplicación encadenada de logaritmos de esta forma simplifica
+            a un único logaritmo.<br />
+            <strong>Ejemplo:</strong> log<sub>2</sub>(4) × log<sub>4</sub>(16) ×
+            log<sub>16</sub>(256) = log<sub>2</sub>(256) = 8
+          </p>
+
+          <h3>9. colog<sub>a</sub>(b) = log<sub>a</sub>(1 / b)</h3>
+          <p>
+            El cologaritmo de un número es el logaritmo del inverso de ese
+            número.<br />
+            <strong>Ejemplo:</strong> colog<sub>10</sub>(100) =
+            log<sub>10</sub>(1/100) = -2
+          </p>
+
+          <h3>10. antilog<sub>a</sub>(b) = a<sup>b</sup></h3>
+          <p>
+            El antilogaritmo es simplemente elevar la base al número dado.<br />
+            <strong>Ejemplo:</strong> antilog<sub>2</sub>(3) = 2<sup>3</sup> = 8
+          </p>
+        </section>
+
+        <section id="calculadora">
+          <h2>Calculadora de Logaritmos</h2>
+        <form method="POST">
+
+          <label for="operation">Tipo de operación:</label>
+          <select name="operation" id="operation" required onchange="actualizarCampos()">
+            <option value="simple">Logaritmo simple</option>
+            <option value="producto">Logaritmo de un producto</option>
+            <option value="cociente">Logaritmo de un cociente</option>
+            <option value="potencia">Logaritmo de una potencia</option>
+            <option value="cambio_base">Cambio de base</option>
+            <option value="logaritmos_encadenados">Logaritmos encadenados</option>
+            <option value="cologaritmo">Cologaritmo</option>
+            <option value="antilogaritmo">Antilogaritmo</option>
+          </select><br /><br />
+
+          <div id="campo-base">
+            <label for="base">Base:</label>
+            <input type="number" name="base" id="base" step="any" /><br /><br />
+          </div>
+
+          <div id="campo-numero1">
+            <label for="numero1">Número 1:</label>
+            <input type="number" name="numero1" id="numero1" step="any" /><br /><br />
+          </div>
+
+          <div id="campo-numero2">
+            <label for="numero2">Número 2:</label>
+            <input type="number" name="numero2" id="numero2" step="any" /><br /><br />
+          </div>
+
+          <div id="campo-exponente">
+            <label for="exponente">Exponente:</label>
+            <input type="number" name="exponente" id="exponente" step="any" /><br /><br />
+          </div>
+
+          <button type="submit">Calcular</button>
+
+        </form>
+
+          </div>
+          {% if steps %}
+          <section>
+            <h3>Resolución paso a paso:</h3>
+            <p class="pasos">{{ steps }}</p>
+            <h3>Resultado: {{ result }}</h3>
+          </section>
+          {% endif %}
+        </section>
+        <script>
+          function actualizarCampos() {
+            const operacion = document.getElementById("operation").value;
+        
+            const campoBase = document.getElementById("campo-base");
+            const campoNumero1 = document.getElementById("campo-numero1");
+            const campoNumero2 = document.getElementById("campo-numero2");
+            const campoExponente = document.getElementById("campo-exponente");
+            const labelExponente = document.querySelector('label[for="exponente"]');
+        
+            campoBase.style.display = "none";
+            campoNumero1.style.display = "none";
+            campoNumero2.style.display = "none";
+            campoExponente.style.display = "none";
+        
+            // Restaurar el nombre original por si cambia
+            labelExponente.textContent = "Exponente:";
+        
+            if (operacion === "simple") {
+              campoBase.style.display = "block";
+              campoNumero1.style.display = "block";
+            } else if (operacion === "producto" || operacion === "cociente") {
+              campoBase.style.display = "block";
+              campoNumero1.style.display = "block";
+              campoNumero2.style.display = "block";
+            } else if (operacion === "potencia") {
+              campoBase.style.display = "block";
+              campoNumero1.style.display = "block";
+              campoExponente.style.display = "block";
+            } else if (operacion === "cambio_base") {
+              campoBase.style.display = "block";
+              campoNumero1.style.display = "block";  // Número a calcular
+              campoExponente.style.display = "block"; // Exponente del cambio de base
+            } else if (operacion === "logaritmos_encadenados") {
+              campoBase.style.display = "block";
+              campoNumero1.style.display = "block";
+              campoNumero2.style.display = "block";
+              campoExponente.style.display = "block";
+              labelExponente.textContent = "Número 3:"; // cambia el label temporalmente
+            } else if (operacion === "cologaritmo" || operacion === "antilogaritmo") {
+              campoBase.style.display = "block";
+              campoNumero1.style.display = "block";
+            }
+          }
+        
+          window.onload = actualizarCampos;
+        
+          const mobileMenu = document.getElementById("mobile-menu");
+          const navMenu = document.getElementById("nav-menu");
+        
+          mobileMenu.addEventListener("click", () => {
+            mobileMenu.classList.toggle("is-active");
+            navMenu.classList.toggle("active");
+          });
+        </script>     
+      </body>
+    </html>
+  </body>
+</html>
